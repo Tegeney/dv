@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DV Lottery Registration - Ethiopia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎫 DV Lottery Registration</h1>
+            <p class="subtitle">Complete your application for the Diversity Visa Lottery Program</p>
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-card">
+            <h2>📚 የዲቪ ፎርሙን ከመሙላታችን በፊት ማሟላት ያሉብን ነገሮች</h2>
+            
+            <div class="info-section">
+                <h3>✅ መሰረታዊ መስፈርቶች</h3>
+                <p>እያንዳንዱ የ DV አመልካች የትምህርት / የሥራ ልምድ ማሟላት አለበት፦</p>
+                <ul>
+                    <li><strong>የትምህርት ደረጃ:</strong> ቢያንስ የሁለተኛ ደረጃ ትምህርት ወይም ተመጣጣኝ, የ 12 ዓመት ትምህርት በሚገባ ያጠናቀቀ / ያጠናቀቀች።</li>
+                    <li><strong>ወይም የሥራ ልምድ:</strong> ባለፉት አምስት ዓመታት ውስጥ የሁለት አመት የሥራ ልምድ ያለው።</li>
+                    <li><strong>ጉርድ ፎቶግራፍ:</strong> የቅርብ ጊዜ ጉርድ ፎቶግራፍ (ከ240 ኪሎባይት የማይበልጥ, JPEG Format)</li>
+                    <li><strong>የምዝገባ ክፍያ:</strong> ወደ አሜሪካ መንግስት የምትከፈለው የ1 ዶላር የምዝገባ ክፍያ በእኛ ይከፈላል 💵</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>📋 የፎርም መሙያ መረጃዎች</h3>
+                <div class="form-info-grid">
+                    <div class="form-info-item">
+                        <strong>1. Full Name (ሙሉ ስም):</strong>
+                        <p>በፓስፖርትዎ ላይ ያለውን ሙሉ ስም በእንግሊዝኛ ይጻፉ</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>2. Email Address (ኢሜይል):</strong>
+                        <p>የእርስዎን ኢሜል አድራሻ ያስገቡ (ምሳሌ: name@example.com)</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>3. Phone Number (ስልክ ቁጥር):</strong>
+                        <p>+251 በመጀመር የስልክ ቁጥርዎን ያስገቡ (ምሳሌ: +251912345678)</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>4. Date of Birth (የልደት ቀን):</strong>
+                        <p>የልደት ቀንዎን በፈረንጆች አቆጣጠር ይምረጡ (MM/DD/YYYY)</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>5. Gender (ፆታ):</strong>
+                        <p>Male (ወንድ) ወይም Female (ሴት) ይምረጡ</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>6. Passport Number (የፓስፖርት ቁጥር):</strong>
+                        <p>አማራጭ - ካለዎት የፓስፖርት ቁጥርዎን ያስገቡ</p>
+                    </div>
+                    <div class="form-info-item">
+                        <strong>7. Country of Birth (የተወለዱበት ሀገር):</strong>
+                        <p>የተወለዱበትን ሀገር ያስገቡ (ምሳሌ: Ethiopia)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <p class="cta-text">የዚህን ገጽ ክፍያ ካጠናቀቁ በኋላ ከታች ያለውን ፎርም ይሙሉ</p>
+                <p class="share-text">ይህን መረጃ ለወዳጆ ሼር በማድረግ ማስተላለፍ ይችላሉ 📤</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <form id="registrationForm" name="dv-lottery" method="POST" data-netlify="true" enctype="multipart/form-data" action="/success.html">
+                <input type="hidden" name="form-name" value="dv-lottery">
+                
+                <div class="form-section">
+                    <h2>📋 Personal Information / የግል መረጃ</h2>
+                    
+                    <h3 class="subsection-title">1. Name (ስም) <span class="required">*</span></h3>
+                    <p class="subsection-note">በፓስፖርትዎ ላይ ያለውን ስም ሳያሳስቱ በእንግሊዝኛ መጻፍ | Write your name as it appears on your passport</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="last_name">Last/Family Name (የመጨረሻ/የቤተሰብ ስም ወይም የአያት ስም) <span class="required">*</span></label>
+                            <input type="text" id="last_name" name="last_name" required placeholder="Last/Family Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="first_name">First Name (የመጀመሪያ ስም ወይም የእርስዎን ስም) <span class="required">*</span></label>
+                            <input type="text" id="first_name" name="first_name" required placeholder="First Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="middle_name">Middle Name (የመካከለኛ ስም ወይም የአባት ስም)</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name (Optional)">
+                    </div>
+
+                    <h3 class="subsection-title">2. Gender (ፆታ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender / ፆታ ይምረጡ</option>
+                            <option value="male">Male (ወንድ)</option>
+                            <option value="female">Female (ሴት)</option>
+                        </select>
+                    </div>
+
+                    <h3 class="subsection-title">3. Birth Date (የልደት ቀን) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="date_of_birth">Month (ወር), Day (ቀን), Year (ዓመት) በፈረንጆች አቆጣጠር <span class="required">*</span></label>
+                        <input type="date" id="date_of_birth" name="date_of_birth" required>
+                        <small>መጀመሪያ Month (ወር), Day (ቀን), Year (ዓመት) በፈረንጆች አቆጣጠር በተሰጠው ቦታ መጻፍ</small>
+                    </div>
+
+                    <h3 class="subsection-title">4-5. Birth Location (የተወለዱበት ቦታ) <span class="required">*</span></h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birth_city">City Where You Were Born (የተወለዱበትን ከተማ) <span class="required">*</span></label>
+                            <input type="text" id="birth_city" name="birth_city" required placeholder="Birth City">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country_of_birth">Country Where You Were Born (የተወለዱበትን ሀገር) <span class="required">*</span></label>
+                            <input type="text" id="country_of_birth" name="country_of_birth" required placeholder="Ethiopia">
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">6. Country of Eligibility (ለ DV መርኃ-ግብር ብቁ የሆነ ሀገር) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="eligible_country">Country of Eligibility for the DV Program <span class="required">*</span></label>
+                        <input type="text" id="eligible_country" name="eligible_country" required placeholder="Ethiopia" value="Ethiopia">
+                        <small>ለ DV መርኃ-ግብር ብቁ የሆነ ሀገር</small>
+                    </div>
+
+                    <h3 class="subsection-title">7. Entrant Photograph (የመግቢያ ፎቶግራፍ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="photo">የቅርብ ጊዜ ጉርድ ፎቶግራፍ (JPEG, ከ240KB የማይበልጥ) <span class="required">*</span></label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="photo" name="photo" required accept="image/jpeg,image/jpg">
+                            <div class="file-upload-text">
+                                <span class="upload-icon">📸</span>
+                                <span>የፎቶግራፍ ይስቀሉ / Upload Photo</span>
+                            </div>
+                        </div>
+                        <small>ፎቶ ግራፉ በደንብ የሚታይ ጉርድ ፎቶግራፍ፣ የቅርብ ጊዜ፣ ከለር ፎቶ፣ JPEG Format፣ መጠኑ ከ240 ኪሎባይት የማይበልጥ መሆን አለበት</small>
+                    </div>
+
+                    <h3 class="subsection-title">8. Mailing Address (የፖስታ መላኪያ አድራሻ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="mailing_address">Full Mailing Address <span class="required">*</span></label>
+                        <textarea id="mailing_address" name="mailing_address" rows="3" required placeholder="የፖስታ መላኪያ አድራሻዎን ያስገቡ"></textarea>
+                    </div>
+
+                    <h3 class="subsection-title">9. Country Where You Live Today (አሁን የምንኖርበትን ሀገር) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="current_country">Current Country of Residence <span class="required">*</span></label>
+                        <input type="text" id="current_country" name="current_country" required placeholder="Ethiopia">
+                    </div>
+
+                    <h3 class="subsection-title">10-11. Contact Information (የመገኛ አድራሻ) <span class="required">*</span></h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number (ስልክ ቁጥር) <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+251912345678">
+                            <small>ለኢትዮጲያ +251 ብለን በመጀመር ስልካችንን ማስገባት</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail Address (የ ኢሜል አድራሻ) <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="name@example.com">
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">12. Education Level (የትምህርት ደረጃ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="education">What is the highest level of education you have achieved? <span class="required">*</span></label>
+                        <select id="education" name="education" required>
+                            <option value="">የትምህርት ደረጃዎን ይምረጡ / Select Education Level</option>
+                            <option value="primary">Primary School Only (አንደኛ ደረጃ ብቻ)</option>
+                            <option value="high_school">High School, No Degree (ሁለተኛ ደረጃ, ያልተጠናቀቀ)</option>
+                            <option value="high_school_graduate">High School Diploma (የ12ኛ ክፍል ማጠናቀቂያ)</option>
+                            <option value="vocational">Vocational School (ሙያ ትምህርት)</option>
+                            <option value="some_university">Some University Courses (የዩኒቨርሲቲ ትምህርት ያልተጠናቀቀ)</option>
+                            <option value="university_degree">University Degree (የዩኒቨርሲቲ ዲግሪ)</option>
+                            <option value="masters">Master's Degree (ማስተርስ ዲግሪ)</option>
+                            <option value="doctorate">Doctorate Degree (ዶክትሬት ዲግሪ)</option>
+                        </select>
+                        <small>ቚያንስ የሁለተኛ ደረጃ ትምህርት ወይም ተመጣጣኝ የ 12 ዓመት ትምህርት በሚገባ ያጠናቀቁ መሆን አለበት</small>
+                    </div>
+
+                    <h3 class="subsection-title">13. Marital Status (የትዳር ሁኔታ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="marital_status">What is your current marital status? <span class="required">*</span></label>
+                        <select id="marital_status" name="marital_status" required>
+                            <option value="">የትዳር ሁኔታዎን ይምረጡ / Select Marital Status</option>
+                            <option value="unmarried">Unmarried (ያላገባ/ች)</option>
+                            <option value="married">Married (ያገባ/ች)</option>
+                            <option value="divorced">Divorced (የፈታ/ች)</option>
+                            <option value="widowed">Widowed (የሞተበት/ባት)</option>
+                            <option value="legally_separated">Legally Separated (በህግ የተለያዩ)</option>
+                        </select>
+                    </div>
+
+                    <h3 class="subsection-title">14. Children Information (የልጆች መረጃ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <label for="number_of_children">Number of Children (የልጅ ብዛት) <span class="required">*</span></label>
+                        <input type="number" id="number_of_children" name="number_of_children" min="0" required placeholder="0">
+                        <small>እያንዳንዱ የተወለዱ ሕጻናት እንዲሁም የማደጎ ልጆች፣ የእንጀራ ልጆች - ያላገቡ ሁሉም ልጆች መሞላት አለባቸዉ (ምንም እንኳን ከእርስዎ ጋር አብረው ባይኖሩም)</small>
+                    </div>
+
+                    <div id="children_details" style="display:none;">
+                        <h4>Children Details (የልጆች ዝርዝር መረጃ)</h4>
+                        <div id="children_container"></div>
+                    </div>
+
+                    <h3 class="subsection-title">Passport Number (የፓስፖርት ቁጥር)</h3>
+                    <div class="form-group">
+                        <label for="passport_number">Passport Number (if available)</label>
+                        <input type="text" id="passport_number" name="passport_number" placeholder="Optional / አማራጭ">
+                        <small>አማራጭ - ካለዎት የፓስፖርት ቁጥርዎን ያስገቡ</small>
+                    </div>
+
+                    <div class="save-info-section">
+                        <button type="button" id="saveInfoBtn" class="save-info-btn">
+                            <span class="btn-icon">💾</span>
+                            Save Information & Proceed to Payment / መረጃ ያስቀምጡ እና ወደ ክፍያ ይቀጥሉ
+                        </button>
+                        <div id="saveMessage" class="save-message" style="display: none;">
+                            ✅ መረጃዎ ተቀምጧል! | Information Saved! Please proceed to payment below.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section" id="paymentSection" style="opacity: 0.5; pointer-events: none;">
+                    <h2>💳 Payment Information / የክፍያ መረጃ</h2>
+                    <p class="info-text">ይህን ፎርም ከማቅረብዎ በፊት ክፍያውን ያጠናቅቁ | Please complete payment before submitting this form</p>
+                    
+                    <div class="payment-options">
+                        <div class="payment-card">
+                            <h3>🏦 Commercial Bank of Ethiopia</h3>
+                            <div class="payment-details">
+                                <p><strong>Account Name / የሂሳብ ስም:</strong> TEGENE WONDIMU</p>
+                                <p><strong>Account Number / የሂሳብ ቁጥር:</strong> 1000604178669</p>
+                                <p><strong>Amount / መጠን:</strong> 300 ETB Only</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-card">
+                            <h3>📱 Telebirr</h3>
+                            <div class="payment-details">
+                                <p><strong>Telebirr Number / ቴሌብር ቁጥር:</strong> +251 907633801</p>
+                                <p><strong>Account Name / ስም:</strong> Tegene</p>
+                                <p><strong>Amount / መጠን:</strong> 300 ETB Only</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">15. Payment Method (የክፍያ ዘዴ) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <select id="payment_method" name="payment_method" required>
+                            <option value="">Select Payment Method / የክፍያ ዘዴ ይምረጡ</option>
+                            <option value="cbe">Commercial Bank of Ethiopia (ኮሜርሻል ባንክ)</option>
+                            <option value="telebirr">Telebirr (ቴሌብር)</option>
+                        </select>
+                        <small>Commercial Bank of Ethiopia ወይም Telebirr ይምረጡ</small>
+                    </div>
+
+                    <h3 class="subsection-title">16. Payment Screenshot (የክፍያ ስክሪንሾት) <span class="required">*</span></h3>
+                    <div class="form-group">
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="payment_screenshot" name="payment_screenshot" required accept="image/*">
+                            <div class="file-upload-text">
+                                <span class="upload-icon">📸</span>
+                                <span>የክፍያ ማረጋገጫ ስክሪንሾትን ይስቀሉ / Click to upload payment screenshot</span>
+                            </div>
+                        </div>
+                        <small>የክፍያ ማረጋገጫ ስክሪንሾትን ይስቀሉ | Upload a clear screenshot of your payment confirmation</small>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        <span>የሰጠሁት መረጃ ትክክል መሆኑን እና ክፍያውን እንዳጠናቀቅኩ አረጋግጣለሁ | I confirm that all information provided is accurate and I have completed the payment <span class="required">*</span></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application / ማመልከቻ ያስገቡ</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>© 2025 DV Lottery Registration Service | ለእገዛ በቴሌግራም ያግኙን / For assistance, contact us on Telegram: <a href="https://t.me/tegene" target="_blank">@tegene</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
