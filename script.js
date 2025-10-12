@@ -11,6 +11,90 @@ document.addEventListener('DOMContentLoaded', function() {
     const paymentSection = document.getElementById('paymentSection');
     
     if (form) {
+        // Load saved data on page load
+        loadSavedData();
+        
+        function loadSavedData() {
+            const savedData = localStorage.getItem('dv_lottery_personal_info');
+            if (savedData) {
+                try {
+                    const data = JSON.parse(savedData);
+                    
+                    // Fill all form fields
+                    Object.keys(data).forEach(key => {
+                        const input = document.querySelector(`[name="${key}"]`);
+                        if (input && data[key]) {
+                            if (input.type === 'file') {
+                                // Skip file inputs - can't programmatically set file values
+                                return;
+                            }
+                            input.value = data[key];
+                            input.style.borderColor = 'var(--secondary-color)';
+                        }
+                    });
+                    
+                    // Trigger children form generation if needed
+                    const numChildren = parseInt(data.number_of_children) || 0;
+                    if (numChildren > 0) {
+                        childrenNumberInput.value = numChildren;
+                        childrenDetails.style.display = 'block';
+                        generateChildrenForms(numChildren);
+                        
+                        // Fill children data
+                        setTimeout(() => {
+                            for (let i = 1; i <= numChildren; i++) {
+                                const childName = document.querySelector(`input[name="child_${i}_name"]`);
+                                const childDOB = document.querySelector(`input[name="child_${i}_dob"]`);
+                                const childGender = document.querySelector(`select[name="child_${i}_gender"]`);
+                                
+                                if (childName && data[`child_${i}_name`]) childName.value = data[`child_${i}_name`];
+                                if (childDOB && data[`child_${i}_dob`]) childDOB.value = data[`child_${i}_dob`];
+                                if (childGender && data[`child_${i}_gender`]) childGender.value = data[`child_${i}_gender`];
+                            }
+                        }, 100);
+                    }
+                    
+                    // Show that data was loaded
+                    console.log('✅ Saved data loaded successfully');
+                    
+                    // Enable payment section if data was previously saved
+                    if (saveInfoBtn && saveMessage && paymentSection) {
+                        saveMessage.style.display = 'block';
+                        saveInfoBtn.textContent = '✅ Saved! Proceed to Payment / ተቀምጧል! ወደ ክፍያ ይቀጥሉ';
+                        saveInfoBtn.style.background = 'linear-gradient(135deg, #059669 0%, #047857 100%)';
+                        paymentSection.style.opacity = '1';
+                        paymentSection.style.pointerEvents = 'auto';
+                    }
+                    
+                } catch (error) {
+                    console.error('Error loading saved data:', error);
+                }
+            }
+        }
+        
+        // Auto-save form data as user types (every 2 seconds after typing stops)
+        let autoSaveTimeout;
+        const formInputs = form.querySelectorAll('input:not([type="file"]), select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                clearTimeout(autoSaveTimeout);
+                autoSaveTimeout = setTimeout(() => {
+                    autoSaveFormData();
+                }, 2000); // Save 2 seconds after user stops typing
+            });
+        });
+        
+        function autoSaveFormData() {
+            const formData = new FormData(form);
+            const dataToSave = {};
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'payment_method' && key !== 'payment_screenshot' && key !== 'terms' && key !== 'photo') {
+                    dataToSave[key] = value;
+                }
+            }
+            localStorage.setItem('dv_lottery_personal_info', JSON.stringify(dataToSave));
+            console.log('💾 Auto-saved form data');
+        }
         // Handle Save Information button
         if (saveInfoBtn) {
             saveInfoBtn.addEventListener('click', function() {
