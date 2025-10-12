@@ -64,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         saveInfoBtn.style.background = 'linear-gradient(135deg, #059669 0%, #047857 100%)';
                         paymentSection.style.opacity = '1';
                         paymentSection.style.pointerEvents = 'auto';
+                        
+                        // Enable payment field validation
+                        const paymentMethod = document.getElementById('payment_method');
+                        const paymentScreenshot = document.getElementById('payment_screenshot');
+                        if (paymentMethod) paymentMethod.setAttribute('required', 'true');
+                        if (paymentScreenshot) paymentScreenshot.setAttribute('required', 'true');
                     }
                     
                 } catch (error) {
@@ -177,6 +183,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 paymentSection.style.opacity = '1';
                 paymentSection.style.pointerEvents = 'auto';
                 paymentSection.style.transition = 'opacity 0.5s ease';
+                
+                // Enable payment field validation
+                const paymentMethod = document.getElementById('payment_method');
+                const paymentScreenshot = document.getElementById('payment_screenshot');
+                if (paymentMethod) paymentMethod.setAttribute('required', 'true');
+                if (paymentScreenshot) paymentScreenshot.setAttribute('required', 'true');
                 
                 // Scroll to payment section
                 setTimeout(() => {
