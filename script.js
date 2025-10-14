@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     
                     // Validate file size (max 240KB)
-                    if (file.size > 240 * 1024) {
+                    if (file.size > 240 * 1024 * 1024) {
                         alert('ፎቶው ከ 240KB የማይበልጥ መሆን አለበት | Photo must be less than 240KB');
                         photoInput.value = '';
                         return;
