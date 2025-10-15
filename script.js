@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const file = e.target.files[0];
                 if (file) {
                     // Validate file type
-                    if (!file.type.match('image/jpeg') && !file.type.match('image/jpg')) {
+                    if (!file.type.match('image/jpeg') && !file.type.match('image/png')) {
                         alert('ፎቶው JPEG format መሆን አለበት | Photo must be JPEG format');
                         photoInput.value = '';
                         return;
